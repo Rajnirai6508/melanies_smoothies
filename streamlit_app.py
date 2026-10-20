@@ -47,4 +47,14 @@ if time_to_insert:
     
     st.success('Your Smoothie is ordered!', icon="✅")
 
+# New section to display smoothiefruit nutrition
+import requests  
+url = "https://my.smoothiefroot.com/api/fruit/watermelon"
+smoothiefroot_response = requests.get(url)  
+#st.write(url)
+st.text(smoothiefroot_response)
+#print(repr(url))
+#st.text(smoothiefroot_response.json())
+#sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
+
 
